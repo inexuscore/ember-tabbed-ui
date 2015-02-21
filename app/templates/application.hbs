@@ -1,0 +1,53 @@
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">DIOT</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="main-nav">
+			<ul class="nav navbar-nav">
+				<li id="home" class="active">
+					<a href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li id="profile">{{#link-to 'profile'}}Profile{{/link-to}}</li>
+				<li id="messages">{{#link-to 'messages'}}Messages{{/link-to}}</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- Main Template -->
+<div class="container" style="padding-top: 60px">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>{{appName}} <small>{{appCite}}</small></h1>
+
+			<div id="dashboard-tabs" role="tabpanel">
+				<ul class="nav nav-tabs" role="tablist">
+					{{#each tab in tabs}}
+						<li role="presentation" {{bind-attr id="tab.name" class="tab.isActive:active"}}>
+							<a {{bind-attr href=tab.target}} role="tab" data-toggle="tab" {{bind-attr data-module=tab.name}}>
+								{{tab.name}}
+								{{#unless tab.isRoot}}
+									<button class="close tab-close" {{action "closeTab" tab}}>&times;</button>
+								{{/unless}}
+							</a>
+						</li>
+					{{/each}}
+				</ul>
+
+				<div class="tab-content">
+					{{#each tab in tabs}}
+						{{view "render-module" moduleBinding="tab"}}
+					{{/each}}
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>

@@ -1,0 +1,12 @@
+body {
+	font-family: 'Oxygen', sans-serif;
+}
+
+.tab-pane {
+	padding-top: 15px;
+}
+
+button.tab-close {
+	padding-left: 10px;
+	margin-top: -3px;
+}

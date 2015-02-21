@@ -1,0 +1,21 @@
+{
+  "name": "tabbed-ui-sample",
+  "version": "0.1.0",
+  "authors": [
+    "Armin Zia<armin.zia@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember": "~1.10.0",
+    "bootstrap": "~3.3.2",
+    "jquery": "~2.1.3"
+  }
+}
