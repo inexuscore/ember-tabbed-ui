@@ -272,7 +272,7 @@ Ember.TEMPLATES["application"] = Ember.HTMLBars.template((function() {
       var el4 = dom.createElement("a");
       dom.setAttribute(el4,"class","navbar-brand");
       dom.setAttribute(el4,"href","#");
-      var el5 = dom.createTextNode("DIOT");
+      var el5 = dom.createTextNode("Ember Tabbed UI");
       dom.appendChild(el4, el5);
       dom.appendChild(el3, el4);
       var el4 = dom.createTextNode("\n		");
